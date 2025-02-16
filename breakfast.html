@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakfast Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: yellow;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        .card {
+            margin-top: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+            margin-bottom: 20px;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card img {
+            border-radius: 8px;
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .card p {
+            color: #666;
+            text-align: left;
+        }
+        .recipe {
+            cursor: pointer;
+            color: #007BFF;
+            text-decoration: underline;
+            margin-top: 10px;
+        }
+        .recipe-details {
+            display: none;
+            text-align: left;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="data:image/jpeg;base64,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">
+        <h2>Breakfast</h2>
+        <p>Breakfast is often called the most important meal of the day, and for good reason. It's the meal that breaks the overnight fast, replenishes your supply of glucose, and provides other essential nutrients to keep your energy levels up throughout the day. A nutritious breakfast can help improve concentration, performance, and mood. Here are some tips and benefits of having a healthy breakfast:</p>
+        <p>1. **Kickstarts Metabolism**: Eating breakfast helps kickstart your metabolism and burn calories throughout the day. It also provides the energy needed to engage in physical activities.</p>
+        <p>2. **Improves Concentration**: A healthy breakfast can improve concentration and performance at school or work. It helps with memory and cognitive function.</p>
+        <p>3. **Balanced Nutrition**: A well-balanced breakfast includes carbohydrates, proteins, and fats. Examples include whole grains, fruits, yogurt, and eggs.</p>
+        <p>4. **Weight Management**: Studies have shown that people who eat breakfast are more likely to maintain a healthy weight compared to those who skip it. Breakfast helps control hunger and reduces the likelihood of overeating later in the day.</p>
+        <p>5. **Mood Enhancement**: Eating a nutritious breakfast can have a positive impact on your mood and stress levels. It can help reduce feelings of irritability and fatigue.</p>
+        <p>In summary, making time for a healthy breakfast can set a positive tone for the day and contribute to overall well-being. Whether it's a quick smoothie, a bowl of oatmeal, or a hearty omelet, choose foods that provide a mix of nutrients to fuel your body and mind.</p>
+        <div class="recipe" onclick="toggleDetails('recipe1')">Quick and Easy Smoothie Recipe</div>
+        <div id="recipe1" class="recipe-details">
+            <h3>Quick and Easy Smoothie</h3>
+            <p>Ingredients:</p>
+            <ul>
+                <li>1 banana</li>
+                <li>1/2 cup of frozen berries</li>
+                <li>1/2 cup of yogurt</li>
+                <li>1/2 cup of milk or juice</li>
+                <li>1 tablespoon of honey (optional)</li>
+            </ul>
+            <p>Instructions:</p>
+            <ol>
+                <li>Combine all ingredients in a blender.</li>
+                <li>Blend until smooth.</li>
+                <li>Pour into a glass and enjoy!</li>
+            </ol>
+        </div>
+        <div class="recipe" onclick="toggleDetails('recipe2')">Hearty Oatmeal Recipe</div>
+        <div id="recipe2" class="recipe-details">
+            <h3>Hearty Oatmeal</h3>
+            <p>Ingredients:</p>
+            <ul>
+                <li>1 cup of rolled oats</li>
+                <li>2 cups of water or milk</li>
+                <li>1/2 teaspoon of cinnamon</li>
+                <li>1/4 cup of dried fruits (raisins, cranberries, etc.)</li>
+                <li>1 tablespoon of honey or maple syrup</li>
+                <li>Fresh fruit for topping (optional)</li>
+            </ul>
+            <p>Instructions:</p>
+            <ol>
+                <li>In a pot, bring water or milk to a boil.</li>
+                <li>Add oats and reduce heat to low.</li>
+                <li>Cook for about 5 minutes, stirring occasionally.</li>
+                <li>Stir in cinnamon and dried fruits.</li>
+                <li>Serve in a bowl and drizzle with honey or maple syrup.</li>
+                <li>Add fresh fruit on top if desired.</li>
+            </ol>
+        </div>
+        <div class="recipe" onclick="toggleDetails('recipe3')">Fluffy Omelet Recipe</div>
+        <div id="recipe3" class="recipe-details">
+            <h3>Fluffy Omelet</h3>
+            <p>Ingredients:</p>
+            <ul>
+                <li>2 large eggs</li>
+                <li>2 tablespoons of milk</li>
+                <li>Salt and pepper to taste</li>
+                <li>1/4 cup of shredded cheese</li>
+                <li>Chopped vegetables (bell peppers, onions, tomatoes, etc.)</li>
+            </ul>
+            <p>Instructions:</p>
+            <ol>
+                <li>In a bowl, whisk together eggs, milk, salt, and pepper.</li>
+                <li>Heat a non-stick skillet over medium heat.</li>
+                <li>Pour the egg mixture into the skillet.</li>
+                <li>Once the edges start to set, add cheese and vegetables.</li>
+                <li>Fold the omelet in half and cook for another minute.</li>
+                <li>Serve warm and enjoy!</li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        function toggleDetails(recipeId) {
+            var details = document.getElementById(recipeId);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

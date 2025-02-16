@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakfast Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: yellow;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        .card {
+            margin-top: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+            margin-bottom: 20px;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card img {
+            border-radius: 8px;
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .card p {
+            color: #666;
+            text-align: left;
+        }
+        .recipe {
+            cursor: pointer;
+            color: #007BFF;
+            text-decoration: underline;
+            margin-top: 10px;
+        }
+        .recipe-details {
+            display: none;
+            text-align: left;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="lunch.html">
+        <h2>Lunch</h2>
+        <p>Lunchy is often called the most important meal of the day, and for good reason. It's the meal that breaks the overnight fast, replenishes your supply of glucose, and provides other essential nutrients to keep your energy levels up throughout the day. A nutritious breakfast can help improve concentration, performance, and mood. Here are some tips and benefits of having a healthy breakfast:</p>
+        <p>1. **Kickstarts Metabolism**: Eating breakfast helps kickstart your metabolism and burn calories throughout the day. It also provides the energy needed to engage in physical activities.</p>
+        <p>2. **Improves Concentration**: A healthy breakfast can improve concentration and performance at school or work. It helps with memory and cognitive function.</p>
+        <p>3. **Balanced Nutrition**: A well-balanced breakfast includes carbohydrates, proteins, and fats. Examples include whole grains, fruits, yogurt, and eggs.</p>
+        <p>4. **Weight Management**: Studies have shown that people who eat breakfast are more likely to maintain a healthy weight compared to those who skip it. Breakfast helps control hunger and reduces the likelihood of overeating later in the day.</p>
+        <p>5. **Mood Enhancement**: Eating a nutritious breakfast can have a positive impact on your mood and stress levels. It can help reduce feelings of irritability and fatigue.</p>
+        <p>In summary, making time for a healthy breakfast can set a positive tone for the day and contribute to overall well-being. Whether it's a quick smoothie, a bowl of oatmeal, or a hearty omelet, choose foods that provide a mix of nutrients to fuel your body and mind.</p>
+        <div class="recipe" onclick="toggleDetails('recipe1')">Quick and Easy Smoothie Recipe</div>
+        <div id="recipe1" class="recipe-details">
+            <h3>Quick and Easy Smoothie</h3>
+            <p>Ingredients:</p>
+            <ul>
+                <li>1 banana</li>
+                <li>1/2 cup of frozen berries</li>
+                <li>1/2 cup of yogurt</li>
+                <li>1/2 cup of milk or juice</li>
+                <li>1 tablespoon of honey (optional)</li>
+            </ul>
+            <p>Instructions:</p>
+            <ol>
+                <li>Combine all ingredients in a blender.</li>
+                <li>Blend until smooth.</li>
+                <li>Pour into a glass and enjoy!</li>
+            </ol>
+        </div>
+        <div class="recipe" onclick="toggleDetails('recipe2')">Hearty Oatmeal Recipe</div>
+        <div id="recipe2" class="recipe-details">
+            <h3>Hearty Oatmeal</h3>
+            <p>Ingredients:</p>
+            <ul>
+                <li>1 cup of rolled oats</li>
+                <li>2 cups of water or milk</li>
+                <li>1/2 teaspoon of cinnamon</li>
+                <li>1/4 cup of dried fruits (raisins, cranberries, etc.)</li>
+                <li>1 tablespoon of honey or maple syrup</li>
+                <li>Fresh fruit for topping (optional)</li>
+            </ul>
+            <p>Instructions:</p>
+            <ol>
+                <li>In a pot, bring water or milk to a boil.</li>
+                <li>Add oats and reduce heat to low.</li>
+                <li>Cook for about 5 minutes, stirring occasionally.</li>
+                <li>Stir in cinnamon and dried fruits.</li>
+                <li>Serve in a bowl and drizzle with honey or maple syrup.</li>
+                <li>Add fresh fruit on top if desired.</li>
+            </ol>
+        </div>
+        <div class="recipe" onclick="toggleDetails('recipe3')">Fluffy Omelet Recipe</div>
+        <div id="recipe3" class="recipe-details">
+            <h3>Fluffy Omelet</h3>
+            <p>Ingredients:</p>
+            <ul>
+                <li>2 large eggs</li>
+                <li>2 tablespoons of milk</li>
+                <li>Salt and pepper to taste</li>
+                <li>1/4 cup of shredded cheese</li>
+                <li>Chopped vegetables (bell peppers, onions, tomatoes, etc.)</li>
+            </ul>
+            <p>Instructions:</p>
+            <ol>
+                <li>In a bowl, whisk together eggs, milk, salt, and pepper.</li>
+                <li>Heat a non-stick skillet over medium heat.</li>
+                <li>Pour the egg mixture into the skillet.</li>
+                <li>Once the edges start to set, add cheese and vegetables.</li>
+                <li>Fold the omelet in half and cook for another minute.</li>
+                <li>Serve warm and enjoy!</li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        function toggleDetails(recipeId) {
+            var details = document.getElementById(recipeId);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+body{
+    padding:0;
+    margin: 0;
+  }
+  .navbar{
+    position: sticky;
+    display: flex;
+    padding:0px;
+    margin-bottom: 10px;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  }
+  .navbar ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  .nav-item{
+    list-style: none;
+    margin:0 8px 0 8px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: red 0px;
+    border-radius: 6px;
+    
+  }
+  .nav-item a{
+    text-decoration: none;
+    color: black;
+  }
+  .nav-item:hover{
+    background-color: yellowgreen;
+    color: black;
+  }
+
+  .slideshow-container{
+    margin:auto;
+    padding: 0;
+    overflow: hidden;
+    width:100%;
+  
+    position:relative;
+  }
+  .slideshow{
+    display: flex;
+    padding:0;
+    margin:0;
+    list-style:none;
+    width:300%;
+    animation: slide 12s infinite;
+  }
+  .slide{
+    min-width: 100%;
+    max-height: 70vh;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slide img{
+    width:100%;
+    text-align: center;
+    color: white;
+    display: block;
+   
+  }
+  .overlay-text{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 25px;
+    color:white;
+    text-align: center;
+    opacity: 100;
+    transition: opacity 0.5s ease;
+  }
+  .slide:nth-child(1) .overlay-text {
+    animation: textFadeIn 12s infinite;
+  }
+  
+  
+  @keyframes slide { 
+    0% { transform: translateX(0%); } 
+    33% { transform: translateX(0%); } 
+    38% { transform: translateX(-100%); } 
+    71% { transform: translateX(-100%); } 
+    76% { transform: translateX(-200%); } 
+    100% { transform: translateX(-200%); } 
+  }
+  
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.meal {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    width: 96*;
+    
+}
+
+.meal:hover {
+    transform: translateY(-10px);
+}
+
+.meal-image {
+    float: left;
+    margin-right: 20px;
+}
+
+.meal-image img {
+    border-radius: 8px 0 0 8px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.meal-text {
+    padding: 20px;
+    overflow: hidden;
+}
+
+.meal-text h2 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.meal-text p {
+    margin: 0;
+    color: #666;
+}
